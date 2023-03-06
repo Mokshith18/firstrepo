@@ -1,5 +1,5 @@
 pipeline {
-	agent {label "Agent1"}  
+	agent any 
 	stages {
 		stage('BUILD') {
 			agent any
@@ -13,7 +13,8 @@ pipeline {
 		}
 		
 		stage('TEST') {
-    	steps {
+    agent any
+			steps {
 				sh '''
 					pwd
 					sleep 5
@@ -23,7 +24,8 @@ pipeline {
 		}
 		
 		stage('DEPLOY') {
-		steps {
+			 agent any
+      steps {
 				sh '''
 					pwd
 					sleep 5
