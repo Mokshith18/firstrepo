@@ -1,0 +1,25 @@
+pipeline {
+	agent any 
+	stages {
+		stage('NAME') {
+			agent any
+      steps {
+				sh '''
+ 					echo "PRITHVIK"
+				'''
+			}	
+		}
+		
+		stage('PLACE') {
+    agent any
+			steps {
+				sh '''
+				
+ 					echo "CHIKKAMAGALURU"
+				'''
+			}	
+		}
+		
+		
+	}
+}
