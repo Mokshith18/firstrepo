@@ -7,7 +7,7 @@ pipeline {
                                 sh '''
                                         a=10
                                         b=20
-                                        sum=$(( $a  $b ))
+                                        sum=$(( $a + $b ))
                                         echo "Sum is: $sum"
                                 '''
                         }
@@ -19,7 +19,7 @@ pipeline {
                                 sh '''
                                         a=10
                                         b=20
-                                        sum=$(( $a  $b ))
+                                        sum=$(( $a - $b ))
                                         echo "DIFF is: $sum"
                                 '''
                         }
@@ -31,7 +31,7 @@ pipeline {
                                 sh '''
                                         a=10
                                         b=20
-                                        sum=$(( $a  $b ))
+                                        sum=$(( $a * $b ))
                                         echo "PRODUCT is: $sum"
                                 '''
                         }
@@ -42,7 +42,7 @@ pipeline {
                         sh '''
                                         a=100
                                         b=20
-                                        sum=$(( $a  $b ))
+                                        sum=$(( $a / $b ))
                                         echo "VALUE is: $sum"
 
                         '''
