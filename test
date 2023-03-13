@@ -1,0 +1,53 @@
+pipeline {
+        agent any
+        stages {
+                stage('ADD') {
+                        agent any
+      steps {
+                                sh '''
+                                        a=10
+                                        b=20
+                                        sum=$(( $a  $b ))
+                                        echo "Sum is: $sum"
+                                '''
+                        }
+                }
+
+                stage('SUB') {
+    agent any
+                        steps {
+                                sh '''
+                                        a=10
+                                        b=20
+                                        sum=$(( $a  $b ))
+                                        echo "DIFF is: $sum"
+                                '''
+                        }
+                }
+
+                stage('MUL') {
+                         agent any
+      steps {
+                                sh '''
+                                        a=10
+                                        b=20
+                                        sum=$(( $a  $b ))
+                                        echo "PRODUCT is: $sum"
+                                '''
+                        }
+                }
+                stage('DIV'){
+                        agent any
+        steps{
+                        sh '''
+                                        a=100
+                                        b=20
+                                        sum=$(( $a  $b ))
+                                        echo "VALUE is: $sum"
+
+                        '''
+                        }
+                }
+        }
+}
+
