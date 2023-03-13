@@ -43,7 +43,7 @@ pipeline {
                                         a=100
                                         b=20
                                         sum=$(( $a / $b ))
-                                        echo "VALUE is: $sum"
+                                        echo "VALUE  is: $sum"
 
                         '''
                         }
