@@ -17,10 +17,10 @@ pipeline {
     agent any
                         steps {
                                 sh '''
-                                        a=10
+                                        
                                         b=20
-                                        sum=$(( $a - $b ))
-                                        echo "DIFF is: $sum"
+                                        diff=$(( $sum - $b ))
+                                        echo "DIFF is: $diff"
                                 '''
                         }
                 }
@@ -29,10 +29,10 @@ pipeline {
                          agent any
       steps {
                                 sh '''
-                                        a=10
+                                        
                                         b=20
-                                        sum=$(( $a * $b ))
-                                        echo "PRODUCT is: $sum"
+                                        mul=$(( $diff * $b ))
+                                        echo "PRODUCT is: $mul"
                                 '''
                         }
                 }
@@ -40,10 +40,10 @@ pipeline {
                         agent any
         steps{
                         sh '''
-                                        a=100
+                                        
                                         b=20
-                                        sum=$(( $a / $b ))
-                                        echo "VALUE  is: $sum"
+                                        quo=$(( $mul / $b ))
+                                        echo "VALUE  is: $quo"
 
                         '''
                         }
